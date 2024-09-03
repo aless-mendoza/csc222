@@ -38,7 +38,13 @@ int main () {
     cout << "11) b - 16" << endl;
     cout << dec << 020 << endl;
     cout << "12) a" << endl;
-    cout << "13) d" << endl;
+    cout << "13) a" << endl;
     cout << dec << 0E1 <<endl;
+    cout << "14) b" << endl;
+    cout << "15) c" << endl;
+    cout << dec << 0x23 <<endl;
+    cout << "16) d" << endl;
+    // cout << dec << X10 <<endl;
+    cout << "17) b" << endl;
     return 0;
 }
