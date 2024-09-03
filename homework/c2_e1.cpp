@@ -27,9 +27,18 @@ int main () {
     int a = 5, j = ++i, k = i++;
     cout << "i=" << i << " j=" <<j<< " k=" <<k<< endl;
     cout << i << j << k << endl;
-    cout << "8) d - 1523" << endl;
-    cin >> i;
-    cout << j + i << k - i << endl;
-    
+    // dont understand
+    cout << "8) b 13-1" << endl;
+    int b = 5, c = b++, d = ++b;
+    cin >> b;
+    cout << c + b << d - b << endl;
+    cout << "9) 2" << endl;
+    cout << "9) 2" << endl;
+    cout << "10) c" << endl;
+    cout << "11) b - 16" << endl;
+    cout << dec << 020 << endl;
+    cout << "12) a" << endl;
+    cout << "13) d" << endl;
+    cout << dec << 0E1 <<endl;
     return 0;
 }
