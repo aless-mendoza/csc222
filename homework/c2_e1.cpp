@@ -46,5 +46,9 @@ int main () {
     cout << "16) d" << endl;
     // cout << dec << X10 <<endl;
     cout << "17) b" << endl;
+    cout << "18) 31" << endl;
+    cout << "19) b, c, d, e, f" << endl;
+    cout << "20) 31" << endl;
+    cout << "21) d" << endl;
     return 0;
 }
