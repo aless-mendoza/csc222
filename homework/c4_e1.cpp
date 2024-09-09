@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     /*
-    //   1) c
+    //   1) 7
     int i = 4;
     float f = 5;
     bool b1 = i < f, b2 = f < i, b3 = f / i < i / f;
@@ -23,22 +23,31 @@ int main() {
     return 0;
     */
     /*
-    //   2) a
-    int a = 2, b = -1, c = 3;
+    //   2) -> 3
+    int a = 4, b = 3, c = 2;
     if (a > 0) { //true
+        b -= 4; // 3-4= -1
         if (b > 0) { //false
-            if (c < 0)
+            if (c > 0)
                 c++;
-            if (c <= 0)
-                c++;
-        }
-    if (b < 0) //true
-        a--; //a=1
+            if (c <= 3)
+                c--;
+    }
+    if (b < 0) // true
+        a--; //a=2
     }
     c = a + b + c; // 3
-    cout << c << endl;
+    cout<<c<<endl;
     */
-    //    3) b
+    /*
+    //    3) b -> n=1
     int n = 1 % 2 + 4 % 2;
     cout << n << endl;
+    */
+
+    // 4 -> 6 
+    int x = 3, y = x++, z = ++x;
+    cout<<"x = "<<x<<", y = "<<y<<", z = "<<z<<endl;
+    cout << (z - x < y - x ? 5 : 6) <<  endl;
+    return 0;
 }
