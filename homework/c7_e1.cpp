@@ -123,12 +123,136 @@ int main() {
     cout << ACC::program_count << ' ' << ACC::programs2024 << endl;
     return 0;
 }
-*/
 // 12) sSaAcC 
 int main() {
     string s = "CS@ACC";
     for (int i = 1; i < s.length(); i += 2)
         s[i - 1] = s[i] + 'a' - 'A';
     cout << s << endl;
+    return 0;
+}
+// 13) 3 2 
+namespace A {
+    int n = 1;
+}
+
+namespace B {
+    int n = 2;
+}
+
+int main() {
+    { using namespace A;
+        B::n = n + 1;
+    }
+    { using namespace B;
+        A::n = n + 1;
+    }
+    cout << A::n << ' ' << B::n << endl;
+    return 0;
+}
+// 14) YES
+int main() {
+    string s1 = "acc";
+    string s2 = "ACC";
+    if (s1 > s2)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+    return 0;
+}
+// 15) BAC
+int main() {
+    string s1 = "A";
+    string s2 = "B";
+    string s3 = "C";
+    s1.swap(s2);
+    s2.swap(s3);
+    s3.swap(s2);
+    cout << s1 << s2 << s3 << endl;
+    return 0;
+}
+
+// 16) xyz
+//     error
+int main() {
+    //string s = "x";
+    //cout << s + "y" + "z" << endl;
+    string z = "z";
+    cout << "x" + "y" + z << endl;
+    return 0;
+}
+// 17) PQPQQ
+int main() {
+    string s = "PQ";
+    s.append(s).push_back(s[s.length() - 1]);
+    cout << s << endl;
+    return 0;
+}
+// 18) CDEFG
+//     EFG
+int main() {
+    string s = "ABCDEFGHIJ";
+    cout << s.substr(2, 5)<<endl;
+    cout << s.substr(2, 5).substr(2).substr() << endl;
+    return 0;
+}
+// 19) -1
+int main() {
+    string s1 = "ACC";
+    string s2 = "ACC!";
+    cout << s1.compare(s2) << endl;
+    return 0;
+}
+// 20) -230 
+int f(int a, int b = 0, int c = 5) {
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
+}
+
+
+int main() {
+    cout << f(3, 1, 2) << f(5, 2) << f(0) << endl;
+    return 0;
+}
+// 21) 3309
+int f(char x) {
+    return x * x;
+}
+
+int f(int a, int b = 0, int c = 5) {
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
+}
+
+
+int main() {
+    char ch = 3;
+    cout << f(1, 4, 2) << f(5, 2) << f(0) << f(ch) << endl;
+    return 0;
+}
+*/
+// 22)78-19
+int f(char x) {
+    return x * x;
+}
+
+int f(float g) {
+    return int(g);
+}
+
+int f(int a, int b = 0, int c = 5) {
+    int total = 0;
+    while (--c)
+        total += b;
+    return total - a;
+}
+
+int main() {
+    char ch = 3;
+    cout << f(2, 3, 4) << f(0, 2) << f(1) << f(ch) << endl;
     return 0;
 }
