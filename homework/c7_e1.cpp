@@ -60,6 +60,10 @@ int main() {
     cout << i << j << endl;
     return 0;
 }
+*/
+// 7) ZXYZYZXYZ YZXYZ
+
+int main() {
     string s1, s2;
     s1 = "XYZ";
     s2 = s1.substr(1, 1) + s1.substr(2) + s1.substr();
@@ -67,6 +71,7 @@ int main() {
     cout << s1 << ' ' << s2 << endl;
     return 0;
 }
+/*
 // 8) 8
 int main() {
     string s = "W";
@@ -234,7 +239,6 @@ int main() {
     cout << f(1, 4, 2) << f(5, 2) << f(0) << f(ch) << endl;
     return 0;
 }
-*/
 // 22)78-19
 int f(char x) {
     return x * x;
@@ -256,3 +260,10 @@ int main() {
     cout << f(2, 3, 4) << f(0, 2) << f(1) << f(ch) << endl;
     return 0;
 }
+int main() {
+    string s = "PQ";
+    s.push_back(s[1]);
+    cout << s << endl;
+    return 0;
+}
+*/

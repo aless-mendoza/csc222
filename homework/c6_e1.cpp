@@ -1,4 +1,5 @@
 /*
+   //.1
 #include <iostream>
 using namespace std;
 
@@ -12,6 +13,7 @@ int main() {
     cout << f << endl;
     return 0;
 }
+    //
 #include <iostream>
 using namespace std;
 
@@ -25,6 +27,7 @@ int main() {
     cout << i << endl;
     return 0;
 }
+    //3
 #include <iostream>
 using namespace std;
 
@@ -38,15 +41,15 @@ int main() {
     cout << m << endl;
     return 0;
 }
+
+    //47
 #include <iostream>
 using namespace std;
 
 int doit(int n, int t = 2) {
     int x = n;
     while (t >>= 1)
-        cout<<"t"<< t<<endl;
         x++;
-        cout<<"x"<<x<<endl;
     return x;
 }
 
@@ -54,6 +57,8 @@ int main() {
     cout <<"done"<< doit(2, 4) << doit(6) << endl;
     return 0;
 }
+
+    //9
 #include <iostream>
 using namespace std;
 
@@ -64,6 +69,7 @@ int main() {
     cout << b << endl;
     return 0;
 }
+    //23
 #include <iostream>
 using namespace std;
 
@@ -77,6 +83,7 @@ int main() {
     cout << n << m << endl;
     return 0;
 }
+*/
 #include <iostream>
 using namespace std;
 
@@ -90,6 +97,7 @@ int main() {
 
     return 0;
 }
+/*
 #include <iostream>
 using namespace std;
 
@@ -163,7 +171,6 @@ int main() {
     cout << endl;
     return 0;
 }
-*/
 #include <iostream>
 using namespace std;
 
@@ -185,3 +192,4 @@ int main() {
     cout << n << endl;
     return 0;
 }
+*/
