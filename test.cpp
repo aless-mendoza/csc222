@@ -1,9 +1,6 @@
-#include <iostream>
-using namespace std;
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include <doctest.h>
 
-int main()
-{
-    int x = 6<<2;
-    cout << x << endl;
-    return 0;
+TEST_CASE("testing doctest") {
+    CHECK(2 == 1);
 }
