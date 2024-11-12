@@ -12,9 +12,10 @@ string render_num_vector(const vector<int>&) {
 }
 */
 
+// 2) this now works for our two additional tests as well
 string render_num_vector(const vector<int>& nums) {
-    ostringstream oss;
-    for (size_t i = 0; i < nums.size(); ++i) {
+    ostringstream oss; // ostringstream means output stream; contains a sequences of chars 
+    for (size_t i = 0; i < nums.size(); ++i) { // loops through all ints in the vector
         oss << nums[i];
         if (i < nums.size() - 1) {
             oss << " ";
