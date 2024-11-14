@@ -24,6 +24,7 @@ string render_num_vector(const vector<int>& nums) {
     return oss.str();
 }
 
+// 3)
 int num_vector_sum(const vector<int>& nums){
     int sum = 0;
     for (int i = 0; i < nums.size(); ++i){
@@ -32,6 +33,7 @@ int num_vector_sum(const vector<int>& nums){
     return sum;
 }
 
+// 4)
 int num_vector_product(const vector<int>& nums){
     int product = 1;
     for (int i = 0; i < nums.size(); ++i){
@@ -41,6 +43,7 @@ int num_vector_product(const vector<int>& nums){
     return product;
 }
 
+// 5)
 string only_evens(const vector<int>& nums) {
     string evens = "";
     for (int i = 0; i < nums.size(); ++i){
