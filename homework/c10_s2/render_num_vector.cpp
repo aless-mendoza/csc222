@@ -57,3 +57,31 @@ string only_evens(const vector<int>& nums) {
 }
      return evens;
 }
+// 6)
+string only_odds(const vector<int>& nums) {
+    string odds = "";
+    for (int i = 0; i < nums.size(); ++i){
+         if (nums[i] % 2 == 1){
+             string num = to_string(nums[i]);
+             odds.append(num);
+                  if (i != nums.size() - 2){
+                      odds.append(" ");
+     }
+}
+}
+     return odds;
+}
+// 7)
+string nums_between(const vector<int>& nums,int low,int high) {
+    string betweens = "";
+    for (int i = 0; i < nums.size(); ++i) {
+        if (nums[i] >= low && nums[i]<= high) {
+            string num = to_string(nums[i]);
+            betweens.append(num);
+            if (i != nums.size() - 1){
+                betweens.append(" ");
+            }
+        }
+    }
+    return betweens;
+}

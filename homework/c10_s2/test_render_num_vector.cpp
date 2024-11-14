@@ -46,3 +46,17 @@ TEST_CASE("Testing only_evens") {
     string expected = "2 4 6 8 12 14 22";
     CHECK(evens == expected);
 }
+// 6)
+TEST_CASE("Testing only_odds") {
+    vector<int> nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+    string evens = only_odds(nums);
+    string expected = "1 3 7 11 27";
+    CHECK(evens == expected);
+}
+// 7)
+TEST_CASE("Testing nums_between function") {
+    vector<int> nums = {11, 2, 13, 4, 10, 26, 7, 88, 19, 20, 14, 5, 12};
+    string nums2 = nums_between(nums, 10, 20);
+    string expected = "11 13 10 19 20 14 12";
+    CHECK(nums2 == expected);
+}
