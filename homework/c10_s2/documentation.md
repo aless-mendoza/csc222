@@ -1,11 +1,11 @@
-# Files
-
-## Command to compile on mac book
+# Command to compile on mac book
 ```
 g++ test_render_num_vector.cpp render_num_vector.cpp -std=c++11
 ./a.out
 ```
----
+
+# Files
+
 ## test\_render\_num\_vector.cpp
 - Contains all the tests you want to run -> has input and what is the expected output
 - links to num\_vector\_utils.h to call functions
