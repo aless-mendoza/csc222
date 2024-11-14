@@ -23,3 +23,34 @@ string render_num_vector(const vector<int>& nums) {
     }
     return oss.str();
 }
+
+int num_vector_sum(const vector<int>& nums){
+    int sum = 0;
+    for (int i = 0; i < nums.size(); ++i){
+         sum += nums[i];
+    }
+    return sum;
+}
+
+int num_vector_product(const vector<int>& nums){
+    int product = 1;
+    for (int i = 0; i < nums.size(); ++i){
+         product *= nums[i];
+    }
+
+    return product;
+}
+
+string only_evens(const vector<int>& nums) {
+    string evens = "";
+    for (int i = 0; i < nums.size(); ++i){
+         if (nums[i] % 2 == 0){
+             string num = to_string(nums[i]);
+             evens.append(num);
+                  if (i != nums.size() - 1){
+                      evens.append(" ");
+     }
+}
+}
+     return evens;
+}
