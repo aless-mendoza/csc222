@@ -25,3 +25,9 @@ g++ test_render_num_vector.cpp render_num_vector.cpp -std=c++11
 - Contains function only\_evens
     - Goes through each item in the vector and uses modulo to determine whether it is even or odd
     - Only prints the even numbers
+- Contains function only\_odds
+    - Goes through each item in the vector and uses modulo to determine whether it is even or odd
+    - Only prints the odd numbers
+- Contains function nums\_betweens
+    - Takes each item in vector and checks to see if it's inbetween the high and low inputs
+    - prints numbers between high and low
