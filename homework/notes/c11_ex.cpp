@@ -9,8 +9,7 @@ struct Time {
 
 void Time::print()
 {
-    Time time = *this;
-    cout << time.hour << ":" << time.minute << ":" << time.second << endl;
+    cout << hour << ":" << minute << ":" << second << endl;
 }
 
 int main(){
