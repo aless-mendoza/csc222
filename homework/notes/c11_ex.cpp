@@ -7,6 +7,7 @@ struct Time {
 
     void print();
     void increment(double secs);
+    double convert_to_seconds() const;
 };
 
 void Time::print()
@@ -28,10 +29,16 @@ void Time::increment(double secs)
     }
 }
 
+double Time::convert_to_seconds() const
+{
+    return (hour * 60 + minute) * 60 + second;
+}
+
 int main(){
     Time current_time = {9, 14, 30.0};
     current_time.increment(500.0);
     current_time.print();
+    current_time.convert_to_seconds();
 
     return 0;
 }
