@@ -11,6 +11,7 @@ struct Time {
     Time(int, int, int);
     Time();
     Time(int,int);
+    Time operator+(const Time& time2);
 
     //functions
     string toString();

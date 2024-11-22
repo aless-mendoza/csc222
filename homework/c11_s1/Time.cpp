@@ -33,6 +33,10 @@ Time::Time(){
     this -> second = 0;
 }
 
+Time Time::operator+(const Time& time2){
+    return Time(hour + time2.hour, minute + time2.minute);
+}
+
 string Time::toString(){    
     string t = to_string(hour)+":";
 
