@@ -12,6 +12,13 @@ Time::Time(int hour,int minute,int second){
     this -> second = second;
 }
 
+Time::Time(int hour, int minute){
+    this -> hour = minute/60;
+    minute -= hour * 60;
+    this -> minute = minute;
+    this -> second = 0;
+}
+
 Time::Time(int second){
     //"stuff inside"
     this -> hour = second/3600;

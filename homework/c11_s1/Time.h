@@ -10,6 +10,7 @@ struct Time {
     Time(int);
     Time(int, int, int);
     Time();
+    Time(int,int);
 
     //functions
     string toString();
