@@ -7,24 +7,44 @@ using namespace std;
 //constructors
 Time::Time(int hour,int minute,int second){
     //"stuff inside"
-    int h = hour;
-    int m = minute; 
-    int s = second;
+    this -> hour = hour;
+    this -> minute = minute; 
+    this -> second = second;
 }
 
-Time::Time(int hour){
+Time::Time(int second){
     //"stuff inside"
-    int h = hour;
-    int m = 0;
-    int s = 0;
+    this -> hour = second/3600;
+    second -= hour * 3600;
+    this -> minute = second/60;
+    second -= minute * 60;
+    this -> second = second;
 }
 
 Time::Time(){
-    int h = 0;
-    int m = 0;
-    int s = 0;
+    this -> hour = 0;
+    this -> minute = 0;
+    this -> second = 0;
 }
 
 string Time::toString(){    
-    return "0";
+    string t = to_string(hour)+":";
+
+    if(minute<10){
+        t+="0";
+    }
+    t += to_string(minute)+":";
+
+    if(second<10){
+        t+="0";
+    }
+    t += to_string(second);
+
+    return t;
 }
+
+
+
+
+
+
