@@ -13,4 +13,5 @@ struct Point {
 
     //functions
     int makePoint();
+//    string toString();
 };
