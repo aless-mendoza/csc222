@@ -12,6 +12,5 @@ struct Point {
     Point operator+(const Point& point2);
 
     //functions
-    int makePoint();
-//    string toString();
+    string toString();
 };

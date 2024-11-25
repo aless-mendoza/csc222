@@ -19,7 +19,7 @@ Point Point::operator+(const Point& point2){
     return Point(x + point2.x, y + point2.y);
 }
 
-int Point::makePoint(){
-
-    return 0;
+string Point::toString(){
+    string s = "("+to_string(x)+".0, "+to_string(y)+".0)";
+    return s;
 }
