@@ -14,11 +14,11 @@ Point::Point(){
     this -> y = 0;
     this -> x = 0;
 }
-/*
-Point Point::operator+(const Point& Point2){
-    return 0;
+
+Point Point::operator+(const Point& point2){
+    return Point(x + point2.x, y + point2.y);
 }
-*/
+
 int Point::makePoint(){
 
     return 0;

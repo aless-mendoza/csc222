@@ -9,7 +9,7 @@ struct Point {
     //constructors
     Point();
     Point(int, int);
-//    Point operator+(const Point& point2);
+    Point operator+(const Point& point2);
 
     //functions
     int makePoint();
