@@ -34,7 +34,7 @@ Time::Time(){
 }
 
 Time Time::operator+(const Time& time2){
-    return Time(hour + time2.hour, minute + time2.minute);
+    return Time(hour + time2.hour, minute + time2.minute, second + time2.second);
 }
 
 string Time::toString(){    
