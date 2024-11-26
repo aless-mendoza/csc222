@@ -6,7 +6,7 @@ using namespace std;
 
 //constructors
 Time::Time(int hour,int minute,int second){
-    //"stuff inside"
+    //this -> calls the members of the class and then the arrow defines them
     this -> hour = hour;
     this -> minute = minute; 
     this -> second = second;
@@ -19,7 +19,6 @@ Time::Time(int hour, int minute){
 }
 
 Time::Time(int second){
-    //"stuff inside"
     this -> hour = second/3600;
     second -= hour * 3600;
     this -> minute = second/60;
