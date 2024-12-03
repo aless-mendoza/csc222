@@ -1,7 +1,16 @@
 # csc222
+## By Alessandra
+---
+## Projects
 
-## Chapter 10 - Doctest and TDD
-[Link to directory](https://github.com/aless-mendoza/csc222/tree/main/homework/c10_s2)
+### Battleships with Toby
+[Link](https://github.com/tobyMickelson/csc222/tree/main/code/battleships)
 
-## Chapter 11 - Member Functions
+---
+## Homework
+
+### Chapter 11 - Member Functions
 [Link](https://github.com/aless-mendoza/csc222/tree/main/homework/c11_s1)
+
+### Chapter 10 - Doctest and TDD
+[Link to directory](https://github.com/aless-mendoza/csc222/tree/main/homework/c10_s2)
