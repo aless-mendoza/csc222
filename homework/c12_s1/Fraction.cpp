@@ -13,6 +13,14 @@ Fraction::Fraction(int top, int bottom) {
     this -> bottom = bottom;
 }
 
+Fraction::Fraction(string sFraction){
+    this -> sFraction = sFraction;
+}
+
+Fraction Fraction::
+    
+    return Fraction(
+
 int Fraction::numerator(){
     return top;
 }
