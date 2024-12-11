@@ -19,7 +19,7 @@ Fraction::Fraction(string sFraction){
 }
 
 Fraction Fraction::toNumber(){
-    int num = stoi(sFraction.substr(0,sFraction.find("/")-1));
+    int num = stoi(sFraction.substr(0,sFraction.find("/")));
     int den = stoi(sFraction.substr(sFraction.find("/")+1,-1));    
     return Fraction(num,den);
 }
