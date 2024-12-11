@@ -10,10 +10,10 @@ struct Fraction {
     //construction
     Fraction();
     Fraction(int,int);
-    Fraction(string);
+    Fraction (string);
 
     //function
-    int toNumber();
+    Fraction toNumber();
     int numerator();
     int denominator();
 };

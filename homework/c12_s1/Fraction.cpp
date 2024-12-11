@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "Fraction.h"
 using namespace std;
 
@@ -17,9 +18,11 @@ Fraction::Fraction(string sFraction){
     this -> sFraction = sFraction;
 }
 
-Fraction Fraction::
-    
-    return Fraction(
+Fraction Fraction::toNumber(){
+    int num = stoi(sFraction.substr(0,sFraction.find("/")-1));
+    int den = stoi(sFraction.substr(sFraction.find("/")+1,-1));    
+    return Fraction(num,den);
+}
 
 int Fraction::numerator(){
     return top;
