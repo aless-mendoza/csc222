@@ -1,4 +1,5 @@
 #include <string>
+#include <list>
 #include <iostream>
 #include "Fraction.h"
 using namespace std;
@@ -16,12 +17,14 @@ Fraction::Fraction(int top, int bottom) {
 
 Fraction::Fraction(string sFraction){
     this -> sFraction = sFraction;
+    int top = 0;
+    int bottom = 1;
 }
 
 Fraction Fraction::toNumber(){
-    int num = stoi(sFraction.substr(0,sFraction.find("/")));
-    int den = stoi(sFraction.substr(sFraction.find("/")+1,-1));    
-    return Fraction(num,den);
+    top = stoi(sFraction.substr(0,sFraction.find("/")));
+    bottom = stoi(sFraction.substr(sFraction.find("/")+1,-1));    
+    return Fraction(top,bottom);
 }
 
 int Fraction::numerator(){

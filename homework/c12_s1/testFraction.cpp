@@ -1,5 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <iostream>
+#include <list>
 #include <string>
 #include <doctest.h>
 #include "Fraction.h"
@@ -16,9 +17,11 @@ TEST_CASE("Test can create Fractions using two constructors") {
 
 TEST_CASE("Test third Fraction constructor using a string") {
     Fraction f1("3/4");
+    f1.toNumber();
     CHECK(f1.numerator() == 3);
     CHECK(f1.denominator() == 4);
     Fraction f2("37/149");
+    f2.toNumber();
     CHECK(f2.numerator() == 37);
     CHECK(f2.denominator() == 149);
 }
