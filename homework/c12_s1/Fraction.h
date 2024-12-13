@@ -1,5 +1,5 @@
+
 #pragma once
-#include <list>
 #include <string>
 using namespace std;
 
@@ -10,11 +10,26 @@ struct Fraction {
 
     //construction
     Fraction();
-    Fraction(int,int);
-    Fraction (string);
+    Fraction(int top,int bottom);
+    explicit Fraction (string sFraction);
+    Fraction(int top);
 
     //function
     Fraction toNumber();
-    int numerator();
-    int denominator();
+    string toString();
+
+    bool operator>(const Fraction other) const;
+    bool operator==(const Fraction other) const;
+    bool operator<(const Fraction other) const;
+    bool operator!=(const Fraction other) const;
+    bool operator>=(const Fraction other) const;
+    bool operator<=(const Fraction other) const;
+    Fraction operator+(const Fraction other) const;
+    Fraction operator-(const Fraction other) const;
+    Fraction operator*(const Fraction other) const;
+    Fraction operator/(const Fraction other) const;
+
 };
+
+int gcd(int, int);
+
