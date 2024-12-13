@@ -9,6 +9,9 @@
 ---
 ## Homework
 
+### Chapter 12 - Fractions
+[link](https://github.com/aless-mendoza/csc222/tree/main/homework/c12_s1)
+
 ### Chapter 11 - Member Functions
 [Link](https://github.com/aless-mendoza/csc222/tree/main/homework/c11_s1)
 
