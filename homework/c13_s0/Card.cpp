@@ -11,6 +11,13 @@ Card::Card(Suit s, Rank r) {
     suit = s; rank = r;
 }
 
+Deck::Deck(int size){
+    vector<Card> temp(size);
+    cards = temp;
+}
+
+//functions
+
 void Card::swap_cards(Card* a, Card* b){
     Card temp = *a;
     *a = *b;
@@ -79,11 +86,6 @@ vector<Card> build_deck(){
         }
     }
     return deck;
-}
-
-Deck::Deck(int size){
-    vector<Card> temp(size);
-    cards = temp;
 }
 
 Deck::Deck(){
