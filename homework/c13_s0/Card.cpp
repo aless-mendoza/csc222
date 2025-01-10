@@ -11,12 +11,35 @@ Card::Card(Suit s, Rank r) {
     suit = s; rank = r;
 }
 
-std::string Card::to_string() const
-{
+std::string Card::to_string() const{
     vector<string> suit_strings = {"None", "Clubs", "Diamonds", "Hearts", "Spades"};
     vector<string> rank_strings = {"Joker", "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 
     if (rank == 0) return rank_strings[rank];
-    return rank_strings[rank] + " of " + suit_strings[suit];
+        return rank_strings[rank] + " of " + suit_strings[suit];
+}
+
+bool Card::operator==(const Card& c2) const{
+    return false;
+}
+
+bool Card::operator>(const Card& c2) const{
+    return false;
+}
+
+bool Card::operator<(const Card& c2) const{
+    return false;
+}
+
+bool Card::operator>=(const Card& c2) const{
+    return false;
+}
+
+bool Card::operator<=(const Card& c2) const{
+    return false;
+}
+
+bool Card::operator!=(const Card& c2) const{
+    return false;
 }
 
