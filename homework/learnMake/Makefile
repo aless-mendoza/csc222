@@ -1,16 +1,19 @@
-thing_wrong := *.o # Don't do this! '*' will not get expanded
-thing_right := $(wildcard *.o)
+hey: one two
+	echo $@
 
-all: one two three four
+	echo $?
 
-# Fails, because $(thing_wrong) is the string "*.o"
-one: $(thing_wrong)
+	echo $^
 
-# Stays as *.o if there are no files that match this pattern :(
-two: *.o 
+	echo $<
 
-# Works as you would expect! In this case, it does nothing.
-three: $(thing_right)
+	touch hey
 
-# Same as rule three
-four: $(wildcard *.o)
+one:
+	touch one
+
+two:
+	touch two
+
+clean:
+	rm -f hey one two
