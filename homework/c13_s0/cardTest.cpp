@@ -31,6 +31,12 @@ TEST_CASE("Test for comparison of Cards") {
     CHECK((c5 >= c6) == true);
 }
 
-
+TEST_CASE("Test swap cards function") {
+    Card c1(HEARTS, QUEEN);
+    Card c2(SPADES, ACE);
+    swap_cards(&c1, &c2);
+    CHECK(c1.to_string() == "Ace of Spades");
+    CHECK(c2.to_string() == "Queen of Hearts");
+}
 
 
