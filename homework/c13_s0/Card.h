@@ -22,7 +22,7 @@ struct Card{
 	bool operator!=(const Card&) const;
 
     string to_string() const;
-    void swap_cards(Card* a, Card* b);
+    void swapCards(Card* a, Card* b);
 };
 
 struct Deck {

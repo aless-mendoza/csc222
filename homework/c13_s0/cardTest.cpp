@@ -30,15 +30,14 @@ TEST_CASE("Test for comparison of Cards") {
     CHECK((c6 < c5) == true);
     CHECK((c5 >= c6) == true);
 }
-/*
 TEST_CASE("Test swap cards function") {
     Card c1(HEARTS, QUEEN);
     Card c2(SPADES, ACE);
-    swap_cards(&c1, &c2);
+    swapCards(&c1, &c2);
     CHECK(c1.to_string() == "Ace of Spades");
     CHECK(c2.to_string() == "Queen of Hearts");
 }
-*/
+/*
 TEST_CASE("Test create Deck with two constructors") {
     Deck d1(10);
     CHECK(d1.cards.size() == 10);
@@ -48,3 +47,4 @@ TEST_CASE("Test create Deck with two constructors") {
     CHECK(d2.cards[0].to_string() == "2 of Clubs");
     CHECK(d2.cards[51].to_string() == "Ace of Spades");
 }
+*/

@@ -18,10 +18,11 @@ Deck::Deck(int size){
 
 //functions
 
-void Card::swap_cards(Card* a, Card* b){
+void Card::swapCards(Card* a, Card* b){
     Card temp = *a;
     *a = *b;
     *b = temp;
+    return void;
 }
 
 string Card::to_string() const{
