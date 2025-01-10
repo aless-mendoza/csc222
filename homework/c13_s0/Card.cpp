@@ -106,3 +106,19 @@ void Deck::print() const{
         cout << cards[i].to_string() << endl;
     }
 }
+
+int Deck::find(const Card& card) const
+{
+    for (int i = 0; i < cards.size(); i++) {
+        if (cards[i] == card) return i;
+    }
+    return -1;
+}
+
+int Card::find(const Deck& deck) const
+{
+    for (int i = 0; i < deck.cards.size(); i++) {
+        if (deck.cards[i] == *this) return i;
+    }
+    return -1;
+}
