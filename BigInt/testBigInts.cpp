@@ -69,4 +69,14 @@ TEST_CASE("Test can add BigInts") {
     CHECK((i1 + i3).toString() == "43333");
 }
 
+TEST_CASE("Test can add negatives") {
+    BigInt i1("123");
+    BigInt i2("-123");
+    BigInt i3("-111");
+    BigInt i4("11");
+    BigInt i5("220");
+    CHECK((i1 + i2).toString() == "0");
+    CHECK((i3 + i4).toString() == "-100");
+    CHECK((i5 + i3).toString() == "109");
+}
 
