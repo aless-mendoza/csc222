@@ -13,6 +13,8 @@ class BigInt
     BigInt(string);
 
     // member functions
-    string to_string() const;
+    string toString() const;
+
+    bool operator==(const BigInt&) const;
 };
 

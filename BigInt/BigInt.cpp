@@ -21,8 +21,11 @@ BigInt::BigInt(string n)
     digits = (n.front() == '-') ? n.substr(1, n.size() - 1) : n;
 }
 
-string BigInt::to_string() const
+string BigInt::toString() const
 {
     return (!negative) ? digits : "-" + digits;
 }
 
+bool BigInt::operator==(const BigInt& b2) const{
+    return (((!negative) ? digits : "-" + digits) == ((!negative) ? b2.digits : "-" + b2.digits));
+}
