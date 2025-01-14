@@ -58,3 +58,15 @@ TEST_CASE ("Adding other inequality symbols"){
     CHECK((i1 != i1) == false);
     CHECK((i2 != i1) == true);
 }
+
+TEST_CASE("Test can add BigInts") {
+    BigInt i1("123");
+    BigInt i2("321");
+    BigInt i3("43210");
+    BigInt i4("9999");
+    BigInt i5("1");
+    CHECK((i1 + i2).toString() == "444");
+    CHECK((i1 + i3).toString() == "43333");
+}
+
+
