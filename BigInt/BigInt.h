@@ -16,5 +16,7 @@ class BigInt
     string toString() const;
 
     bool operator==(const BigInt&) const;
+    bool operator>(const BigInt&) const;
+    bool operator<(const BigInt&) const;
 };
 
