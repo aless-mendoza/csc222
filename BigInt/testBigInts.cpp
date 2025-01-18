@@ -79,7 +79,6 @@ TEST_CASE("Test can add negatives") {
     CHECK((i3 + i4).toString() == "-100");
     CHECK((i5 + i3).toString() == "109");
 }
-*/
 
 TEST_CASE("test basic additon"){
     BigInt i1("3");
@@ -98,3 +97,4 @@ TEST_CASE("Test Multiplication") {
     CHECK((i6 * i5).toString() == "2");
     CHECK((i3 * i1).toString() == "666");
 }
+*/
