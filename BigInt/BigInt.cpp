@@ -72,8 +72,7 @@ BigInt BigInt::operator+(const BigInt& b2) const{
     int int1, int2;
     string bInt1 = digits;
     string bInt2 = b2.digits;
-    cout<<bInt1.length
-    for (int i = 0; i<=((bInt1.length>bInt2.length) ? bInt1.length : bInt2.length); i++){
+    for (int i = 0; i<=((bInt1.length()>bInt2.length()) ? bInt1.length() : bInt2.length()); i++){
         int1 = stoi(bInt1.substr(-1));
         int2 = stoi(bInt2.substr(-1));
         sum.insert(0, (int1+int2)%10);
