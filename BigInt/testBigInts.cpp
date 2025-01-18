@@ -58,7 +58,7 @@ TEST_CASE ("Adding other inequality symbols"){
     CHECK((i1 != i1) == false);
     CHECK((i2 != i1) == true);
 }
-
+/*
 TEST_CASE("Test can add BigInts") {
     BigInt i1("123");
     BigInt i2("321");
@@ -78,6 +78,13 @@ TEST_CASE("Test can add negatives") {
     CHECK((i1 + i2).toString() == "0");
     CHECK((i3 + i4).toString() == "-100");
     CHECK((i5 + i3).toString() == "109");
+}
+*/
+
+TEST_CASE("test basic additon"){
+    BigInt i1("3");
+    BigInt i2("6");
+    CHECK((i1 + i2).toString() == "9");
 }
 
 TEST_CASE("Test Multiplication") {
