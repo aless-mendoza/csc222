@@ -47,12 +47,14 @@ TEST_CASE ("Adding other inequality symbols"){
     BigInt i1("12");
     BigInt i2("-12");
     BigInt i3("24");
+    BigInt i4("-33");
     CHECK((i1 < i1) == false);
     CHECK((i1 < i3) == true);
     CHECK((i2 < i1) == true);
     CHECK((i2 <= i2) == true);
     CHECK((i3 <= i1) == false);
     CHECK((i2 <= i1) == true);
+    CHECK((i2 <= i4) == false);
     CHECK((i1 >= i1) == true);
     CHECK((i2 >= i1) == false);
     CHECK((i1 != i1) == false);
