@@ -53,10 +53,12 @@ bool BigInt::operator>=(const BigInt& b2) const {
     return true;
 }
 
-bool BigInt::operator<=(const BigInt& b2) const{
-    int bInt1 = stoi((!negative) ? digits : "-" + digits);
-    int bInt2 = stoi((!b2.negative) ? b2.digits : "-" + b2.digits);
-    return (bInt1<=bInt2);
+bool BigInt::operator<=(const BigInt& int2) const {
+    if (negative == true and int2.negative == false) return true;
+    if ((negative == int2.negative and negative == true) and (digits < int2.digits)) return false;
+    if ((negative == int2.negative and negative == true) and (digits > int2.digits)) return true;
+    if (digits > int2.digits) return false;
+    return true;
 }
 
 bool BigInt::operator!=(const BigInt& b2) const{
