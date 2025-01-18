@@ -29,13 +29,6 @@ string BigInt::toString() const
 bool BigInt::operator==(const BigInt& b2) const{
     return (((!negative) ? digits : "-" + digits) == ((!b2.negative) ? b2.digits : "-" + b2.digits));
 }
-/*
-bool BigInt::operator>(const BigInt& b2) const{
-    int bInt1 = stoi((!negative) ? digits : "-" + digits);
-    int bInt2 = stoi((!b2.negative) ? b2.digits : "-" + b2.digits);
-    return (bInt1>bInt2);
-}
-*/
 
 bool BigInt::operator>(const BigInt& b2) const{
     if (negative == true and b2.negative == false) return false;
@@ -45,10 +38,11 @@ bool BigInt::operator>(const BigInt& b2) const{
     return true;
 }
 
-bool BigInt::operator<(const BigInt& b2) const{
-    int bInt1 = stoi((!negative) ? digits : "-" + digits);
-    int bInt2 = stoi((!b2.negative) ? b2.digits : "-" + b2.digits);
-    return (bInt1<bInt2);
+bool BigInt::operator<(const BigInt& b2) const {
+    if (negative == true and b2.negative == false) return true;
+    if ((negative == b2.negative and negative == true) and (digits > b2.digits)) return true;
+    if ((negative == b2.negative and negative == false) and (digits < b2.digits)) return true;
+    return false;
 }
 
 bool BigInt::operator>=(const BigInt& b2) const{
