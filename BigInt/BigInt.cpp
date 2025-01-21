@@ -64,33 +64,4 @@ bool BigInt::operator<=(const BigInt& b2) const {
 bool BigInt::operator!=(const BigInt& b2) const{
     return (((!negative) ? digits : "-" + digits) != ((!b2.negative) ? b2.digits : "-" + b2.digits));
 }
-/*
-BigInt BigInt::operator+(const BigInt& b2) const{
-    int bInt1 = stoi((!negative) ? digits : "-" + digits);
-    int bInt2 = stoi((!b2.negative) ? b2.digits : "-" + b2.digits);
-    return (bInt1+bInt2);
-}
 
-
-BigInt BigInt::operator+(const BigInt& b2) const{
-    string sum = "";
-    int int1, int2;
-    string bInt1 = digits;
-    string bInt2 = b2.digits;
-    for (int i = 0; i<=((bInt1.length()>bInt2.length()) ? bInt1.length() : bInt2.length()); i++){
-        int1 = stoi(bInt1.substr(-1));
-        int2 = stoi(bInt2.substr(-1));
-        sum.insert(0, (int1+int2)%10);
-        bInt1.erase(-1,1);
-        bInt2.erase(-1,1);
-    } 
-    return (sum);
-}
-
-
-BigInt BigInt::operator*(const BigInt& b2) const{
-    int bInt1 = stoi((!negative) ? digits : "-" + digits);
-    int bInt2 = stoi((!b2.negative) ? b2.digits : "-" + b2.digits);
-    return (bInt1*bInt2);
-}
-*/

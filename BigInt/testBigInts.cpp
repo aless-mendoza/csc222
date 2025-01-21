@@ -60,43 +60,4 @@ TEST_CASE ("Adding other inequality symbols"){
     CHECK((i1 != i1) == false);
     CHECK((i2 != i1) == true);
 }
-/*
-TEST_CASE("Test can add BigInts") {
-    BigInt i1("123");
-    BigInt i2("321");
-    BigInt i3("43210");
-    BigInt i4("9999");
-    BigInt i5("1");
-    CHECK((i1 + i2).toString() == "444");
-    CHECK((i1 + i3).toString() == "43333");
-}
 
-TEST_CASE("Test can add negatives") {
-    BigInt i1("123");
-    BigInt i2("-123");
-    BigInt i3("-111");
-    BigInt i4("11");
-    BigInt i5("220");
-    CHECK((i1 + i2).toString() == "0");
-    CHECK((i3 + i4).toString() == "-100");
-    CHECK((i5 + i3).toString() == "109");
-}
-
-TEST_CASE("test basic additon"){
-    BigInt i1("3");
-    BigInt i2("6");
-    CHECK((i1 + i2).toString() == "9");
-}
-
-TEST_CASE("Test Multiplication") {
-    BigInt i1("2");
-    BigInt i2("1");
-    BigInt i3("333");
-    BigInt i5("-1");
-    BigInt i6("-2");
-    CHECK((i3 * i2).toString() == "333");
-    CHECK((i3 * i5).toString() == "-333");
-    CHECK((i6 * i5).toString() == "2");
-    CHECK((i3 * i1).toString() == "666");
-}
-*/
