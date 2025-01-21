@@ -1,6 +1,9 @@
 #include <string>
 using namespace std;
 
+string increment_digit_string(const string &);
+string sum_common_len_digit_strs(const string&, const string&);
+
 class BigInt
 {
     bool negative;
@@ -11,6 +14,8 @@ class BigInt
     BigInt();
     BigInt(int);
     BigInt(string);
+
+    bool is_negative() const;
 
     // member functions
     string toString() const;
