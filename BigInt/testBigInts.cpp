@@ -93,8 +93,8 @@ TEST_CASE("Test can add BigInts") {
     BigInt i4("9999");
     BigInt i5("1");
     BigInt i6("123456789123456789123456789");
-    CHECK((i1 + i2).to_string() == "444");
-    CHECK((i1 + i3).to_string() == "43333");
-    CHECK((i4 + i5).to_string() == "10000");
-    CHECK((i6 + i6).to_string() == "246913578246913578246913578");
+    CHECK((i1 + i2).toString() == "444");
+    CHECK((i1 + i3).toString() == "43333");
+    CHECK((i4 + i5).toString() == "10000");
+    CHECK((i6 + i6).toString() == "246913578246913578246913578");
 }
