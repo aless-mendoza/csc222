@@ -3,6 +3,14 @@
 #include "BigInt.h"
 using namespace std;
 
+int to_num(char c) {  
+    return c - '0';   
+}  
+
+char digit_to_char(int digit) {  
+    return digit + '0';  
+}  
+
 string incrementDigitString(const string &digitString)
 {
     string digits = digitString;
