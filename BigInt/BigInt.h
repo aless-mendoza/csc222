@@ -1,8 +1,8 @@
 #include <string>
 using namespace std;
 
-string increment_digit_string(const string &);
-string sum_common_len_digit_strs(const string&, const string&);
+string incrementDigitString(const string &);
+string sumCommonLenDigitStrs(const string&, const string&);
 
 class BigInt
 {

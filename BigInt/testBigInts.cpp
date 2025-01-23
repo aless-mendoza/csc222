@@ -63,13 +63,13 @@ TEST_CASE ("Adding other inequality symbols"){
 
 
 TEST_CASE("Test helper function to add digit strings with same num digits") {
-    CHECK(sum_common_len_digit_strs("123", "321") == "444");
-    CHECK(sum_common_len_digit_strs("123", "123") == "246");
-    CHECK(sum_common_len_digit_strs("123", "222") == "345");
-    CHECK(sum_common_len_digit_strs("123", "119") == "242");
-    CHECK(sum_common_len_digit_strs("123", "888") == "c+011");
-    CHECK(sum_common_len_digit_strs("999", "999") == "c+998");
-    CHECK(sum_common_len_digit_strs("123456789012345678901234567890",
+    CHECK(sumCommonLenDigitStrs("123", "321") == "444");
+    CHECK(sumCommonLenDigitStrs("123", "123") == "246");
+    CHECK(sumCommonLenDigitStrs("123", "222") == "345");
+    CHECK(sumCommonLenDigitStrs("123", "119") == "242");
+    CHECK(sumCommonLenDigitStrs("123", "888") == "c+011");
+    CHECK(sumCommonLenDigitStrs("999", "999") == "c+998");
+    CHECK(sumCommonLenDigitStr("123456789012345678901234567890",
                                     "123456789012345678901234567890")
                                  == "246913578024691357802469135780");
     CHECK(sum_common_len_digit_strs("900000000000000000000000000009",

@@ -3,34 +3,34 @@
 #include "BigInt.h"
 using namespace std;
 
-string increment_digit_string(const string &digit_string)
+string incrementDigitString(const string &digitString)
 {
-    string digits = digit_string;
+    string digits = digitString;
     int pos = digits.size() - 1;
-    char next_digit = digits[pos] + 1;
+    char nextDigit = digits[pos] + 1;
 
-    while (next_digit > '9' && pos >= 0) {
+    while (nextDigit > '9' && pos >= 0) {
         digits[pos] = '0';
-        next_digit = digits[--pos] + 1;
+        nextDigit = digits[--pos] + 1;
     }
 
     if (pos >= 0)
-        digits[pos] = next_digit;
+        digits[pos] = nextDigit;
     else
         digits = "1" + digits;
 
     return digits;
 }
 
-string sum_common_len_digit_strs(const string &s1, const string &s2)
+string sumCommonLenDigitStrs(const string &s1, const string &s2)
 {
-    char digit_sum, carry = 0;
+    char digitSum, carry = 0;
     string sum = s1;
 
     for (int i = s1.size() - 1; i >= 0; i--) {
-        digit_sum = to_num(s1[i]) + to_num(s2[i]) + carry;
-        sum[i] = digit_to_char(digit_sum % 10);
-        carry = digit_sum > 9 ? 1 : 0;
+        digitNum = toNum(s1[i]) + toNum(s2[i]) + carry;
+        sum[i] = digitToChar(digitSum % 10);
+        carry = digitSum > 9 ? 1 : 0;
     }
 
     return carry ? "c+" + sum : sum;
@@ -113,7 +113,7 @@ BigInt BigInt::operator+(const BigInt& i2) const
     const BigInt *longer;
     const BigInt *shorter;
     int common, extra;
-    string summed_common_digits, leading_digits;
+    string summedCommonDigits, leadingDigits;
 
     if ((*this).digits.size() > i2.digits.size()) {
         longer = this;
@@ -125,15 +125,15 @@ BigInt BigInt::operator+(const BigInt& i2) const
 
     common = shorter->digits.size();
     extra = longer->digits.size() - common;
-    summed_common_digits = sum_common_len_digit_strs(
+    summedCommonDigits = sumCommonLenDigitStrs(
        shorter->digits, 
        longer->digits.substr(extra)
     );
-    leading_digits = longer->digits.substr(0, extra);
+    leadingDigits = longer->digits.substr(0, extra);
 
-    if (summed_common_digits[0] != 'c')
-        return BigInt(leading_digits + summed_common_digits);
+    if (summedCommonDigits[0] != 'c')
+        return BigInt(leadingDigits + summedCommonDigits);
 
-    return BigInt(increment_digit_string(leading_digits) +
-                  summed_common_digits.substr(2));
+    return BigInt(incrementDigitString(leadingDigits) +
+                  summedCommonDigits.substr(2));
 }
