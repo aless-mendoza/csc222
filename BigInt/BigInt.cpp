@@ -28,8 +28,8 @@ string sumCommonLenDigitStrs(const string &s1, const string &s2)
     string sum = s1;
 
     for (int i = s1.size() - 1; i >= 0; i--) {
-        digitNum = toNum(s1[i]) + toNum(s2[i]) + carry;
-        sum[i] = digitToChar(digitSum % 10);
+        digitSum = to_Num(s1[i]) + to_Num(s2[i]) + carry;
+        sum[i] = digit_To_Char(digitSum % 10);
         carry = digitSum > 9 ? 1 : 0;
     }
 
