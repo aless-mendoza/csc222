@@ -111,7 +111,7 @@ bool BigInt::operator!=(const BigInt& b2) const{
 BigInt BigInt::operator+(const BigInt& i2) const
 {
     if ((*this).digits.size() == i2.digits.size()) {
-        string raw_sum = sum_common_len_digit_strs((*this).digits, i2.digits);
+        string raw_sum = sumCommonLenDigitStrs((*this).digits, i2.digits);
         if (raw_sum[0] == 'c')
             return BigInt("1" + raw_sum.substr(2));
         return BigInt(raw_sum);
