@@ -69,21 +69,21 @@ TEST_CASE("Test helper function to add digit strings with same num digits") {
     CHECK(sumCommonLenDigitStrs("123", "119") == "242");
     CHECK(sumCommonLenDigitStrs("123", "888") == "c+011");
     CHECK(sumCommonLenDigitStrs("999", "999") == "c+998");
-    CHECK(sumCommonLenDigitStr("123456789012345678901234567890",
+    CHECK(sumCommonLenDigitStrs("123456789012345678901234567890",
                                     "123456789012345678901234567890")
                                  == "246913578024691357802469135780");
-    CHECK(sum_common_len_digit_strs("900000000000000000000000000009",
+    CHECK(sumCommonLenDigitStrs("900000000000000000000000000009",
                                     "900000000000000000000000000009")
                                  == "c+800000000000000000000000000018");
 }
 
 TEST_CASE("Test increment_digit_string helper function") {
-    CHECK(increment_digit_string("8") == "9");
-    CHECK(increment_digit_string("24") == "25");
-    CHECK(increment_digit_string("100") == "101");
-    CHECK(increment_digit_string("99") == "100");
-    CHECK(increment_digit_string("1199") == "1200");
-    CHECK(increment_digit_string("9999") == "10000");
+    CHECK(incrementDigitString("8") == "9");
+    CHECK(incrementDigitString("24") == "25");
+    CHECK(incrementDigitString("100") == "101");
+    CHECK(incrementDigitString("99") == "100");
+    CHECK(incrementDigitString("1199") == "1200");
+    CHECK(incrementDigitString("9999") == "10000");
 }
 
 TEST_CASE("Test can add BigInts") {
