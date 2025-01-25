@@ -98,3 +98,16 @@ TEST_CASE("Test can add BigInts") {
     CHECK((i4 + i5).toString() == "10000");
     CHECK((i6 + i6).toString() == "246913578246913578246913578");
 }
+
+TEST_CASE("Test can subtract BigInts") {
+    BigInt i1("123");
+    BigInt i2("321");
+    BigInt i3("43210");
+    BigInt i4("9999");
+    BigInt i5("1");
+    BigInt i6("123456789123456789123456789");
+    CHECK((i2 - i1).toString() == "198");
+    CHECK((i1 - i3).toString() == "-43087");
+    CHECK((i5 - i4).toString() == "-9998");
+    CHECK((i6 - i6).toString() == "0");
+}
