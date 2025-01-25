@@ -3,6 +3,7 @@ using namespace std;
 
 string incrementDigitString(const string &);
 string sumCommonLenDigitStrs(const string&, const string&);
+string subtractCommonLenDigitStrs(const string&, const string&);
 
 class BigInt
 {
