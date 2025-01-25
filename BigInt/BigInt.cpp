@@ -145,3 +145,38 @@ BigInt BigInt::operator+(const BigInt& i2) const
     return BigInt(incrementDigitString(leadingDigits) +
                   summedCommonDigits.substr(2));
 }
+
+BigInt BigInt::operator-(const BigInt &i2) const
+{
+    if ((*this).digits.size() == i2.digits.size())
+    {
+        string raw_diff = subtractCommonLenDigitStrs((*this).digits, i2.digits);
+        return BigInt(raw_diff);
+    }
+
+    // Minuends have different numbers of digits
+    const BigInt *longer;
+    const BigInt *shorter;
+    int common, extra;
+    string subtractedCommonDigits, leadingDigits;
+
+    if ((*this).digits.size() > i2.digits.size())
+    {
+        longer = this;
+        shorter = &i2;
+    }
+    else
+    {
+        longer = &i2;
+        shorter = this;
+    };
+
+    common = shorter->digits.size();
+    extra = longer->digits.size() - common;
+    subtractedCommonDigits = subtractCommonLenDigitStrs(
+        longer->digits.substr(extra),
+        shorter->digits);
+    leadingDigits = longer->digits.substr(0, extra);
+
+    return BigInt(leadingDigits + subtractedCommonDigits);
+}
