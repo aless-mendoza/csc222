@@ -110,4 +110,5 @@ TEST_CASE("Test can subtract BigInts") {
     CHECK((i1 - i3).toString() == "-43087");
     CHECK((i5 - i4).toString() == "-9998");
     CHECK((i6 - i6).toString() == "0");
+    CHECK((i3 - i4).toString() == "33211");
 }
