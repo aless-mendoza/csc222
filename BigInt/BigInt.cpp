@@ -202,7 +202,9 @@ BigInt BigInt::operator-(const BigInt &i2) const
         longer->digits.substr(extra),
         shorter->digits);
     leadingDigits = longer->digits.substr(0, extra);
-    string totalDiff = leadingDigits+subtractedCommonDigits;
+    if (leadingDigits.substr(leadingDigits.size()-1) < (i2.digits).substr(0)){
+        leadingDigits = subtractCommonLenDigitStrs((leadingDigits), "1");
+    }
     
-    return BigInt(neg + totalDiff);
+    return BigInt(neg + leadingDigits + subtractedCommonDigits);
 }
