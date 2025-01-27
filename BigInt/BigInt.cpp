@@ -167,6 +167,10 @@ BigInt BigInt::operator+(const BigInt& i2) const
 
 BigInt BigInt::operator-(const BigInt &i2) const
 {
+    if(((!negative) ? digits : "-" + digits) == ((!i2.negative) ? i2.digits : "-" + i2.digits)){
+        return BigInt(0);
+    }
+
     if ((*this).digits.size() == i2.digits.size())
     {
         string raw_diff = subtractCommonLenDigitStrs((*this).digits, i2.digits);
@@ -198,7 +202,7 @@ BigInt BigInt::operator-(const BigInt &i2) const
         longer->digits.substr(extra),
         shorter->digits);
     leadingDigits = longer->digits.substr(0, extra);
+    string totalDiff = leadingDigits+subtractedCommonDigits;
     
-
-    return BigInt(neg + leadingDigits + subtractedCommonDigits);
+    return BigInt(neg + totalDiff);
 }
