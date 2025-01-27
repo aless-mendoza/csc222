@@ -181,7 +181,7 @@ BigInt BigInt::operator-(const BigInt &i2) const
     const BigInt *longer;
     const BigInt *shorter;
     int common, extra;
-    string subtractedCommonDigits, leadingDigits;
+    string subtractedCommonDigits, leadingDigits, zeroFiller;
     string neg = "";
 
     if ((*this).digits.size() > i2.digits.size())
@@ -195,16 +195,17 @@ BigInt BigInt::operator-(const BigInt &i2) const
         shorter = this;
         neg = "-";
     };
-
-    while(longer>shorter){
-        (shorter -> digits).insert(0,"0");
+    while (longer->digits.size()>shorter->digits.size()){
+        zeroFiller.append("0");
     }
-
+/*
+    shorter->digits = zeroFiller + shorter->digits; 
+*/
     common = shorter->digits.size();
     extra = longer->digits.size() - common;
     subtractedCommonDigits = subtractCommonLenDigitStrs(
         longer->digits.substr(extra),
-        shorter->digits);
+        zeroFiller + shorter->digits);
     leadingDigits = longer->digits.substr(0, extra);
     
     return BigInt(neg + leadingDigits + subtractedCommonDigits);
