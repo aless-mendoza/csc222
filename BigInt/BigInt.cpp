@@ -196,15 +196,16 @@ BigInt BigInt::operator-(const BigInt &i2) const
         neg = "-";
     };
 
+    while(longer>shorter){
+        (shorter -> digits).insert(0,"0");
+    }
+
     common = shorter->digits.size();
     extra = longer->digits.size() - common;
     subtractedCommonDigits = subtractCommonLenDigitStrs(
         longer->digits.substr(extra),
         shorter->digits);
     leadingDigits = longer->digits.substr(0, extra);
-    if (leadingDigits.substr(leadingDigits.size()-1) < (i2.digits).substr(0)){
-        leadingDigits = subtractCommonLenDigitStrs((leadingDigits), "1");
-    }
     
     return BigInt(neg + leadingDigits + subtractedCommonDigits);
 }
