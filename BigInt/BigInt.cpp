@@ -209,9 +209,9 @@ BigInt BigInt::operator-(const BigInt &i2) const
     common = shorter->digits.size();
     extra = longer->digits.size() - common;
     subtractedCommonDigits = subtractCommonLenDigitStrs(
-        longer->digits.substr(extra),
-         shorter->digits);
+        longer->digits,
+         fullShort);
     leadingDigits = longer->digits.substr(0, extra);
     
-    return BigInt(neg + leadingDigits + subtractedCommonDigits);
+    return BigInt(neg + subtractedCommonDigits);
 }
