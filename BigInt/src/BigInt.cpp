@@ -72,11 +72,16 @@ string multiplyDigitStrings(const string &s1, const string &s2){
         int carry = 0;
         for (int j = m - 1; j >= 0; j--) {
             int sum = to_num(s1[i]) * to_num(s2[j]) + to_num(result[i + j + 1]) + carry;
+            carry = sum / 10;
             result[i + j + 1] = digit_to_char(sum % 10);
         }
         result[i] += carry;
     }
 
+    size_t startpos = result.find_first_not_of('0');
+    if (string::npos != startpos) {
+        return result.substr(startpos);
+    }
     return result;
 }
 
