@@ -199,7 +199,6 @@ BigInt BigInt::operator-(const BigInt &i2) const
         return BigInt(raw_diff);
     }
 
-    // Minuends have different numbers of digits
     const BigInt *longer;
     const BigInt *shorter;
     int common, extra;
