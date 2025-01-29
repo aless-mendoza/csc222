@@ -202,7 +202,7 @@ BigInt BigInt::operator-(const BigInt &i2) const
     const BigInt *longer;
     const BigInt *shorter;
     int common, extra;
-    string subtractedCommonDigits, leadingDigits;
+    string subtractedCommonDigits;
     string neg = "";
 
     if ((*this).digits.size() > i2.digits.size())
