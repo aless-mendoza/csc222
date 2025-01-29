@@ -63,6 +63,10 @@ string subtractCommonLenDigitStrs(const string &s1, const string &s2)
     return diff;
 }
 
+string multiplyDigitStrings(const string &s1, const string &s2){
+    return 0;
+}
+
 //constructions
 
 BigInt::BigInt()
@@ -207,4 +211,8 @@ BigInt BigInt::operator-(const BigInt &i2) const
          fullShort);
     
     return BigInt(neg + subtractedCommonDigits);
+}
+
+BigInt BigInt::operator*(const BigInt& i2) const{
+    return 0;
 }

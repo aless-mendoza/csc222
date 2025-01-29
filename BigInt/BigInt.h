@@ -4,6 +4,7 @@ using namespace std;
 string incrementDigitString(const string &);
 string sumCommonLenDigitStrs(const string&, const string&);
 string subtractCommonLenDigitStrs(const string&, const string&);
+string multiplyDigitStrings(const string&, const string&);
 
 class BigInt
 {
@@ -30,5 +31,6 @@ class BigInt
 
     BigInt operator+(const BigInt&) const;
     BigInt operator-(const BigInt&) const;
+    BigInt operator*(const BigInt&) const;
 };
 
