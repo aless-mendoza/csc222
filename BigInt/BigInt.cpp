@@ -66,7 +66,7 @@ string subtractCommonLenDigitStrs(const string &s1, const string &s2)
 string multiplyDigitStrings(const string &s1, const string &s2){
     int n = s1.size();
     int m = s2.size();
-    string result('0');
+    string result("000");
 
     for (int i = n - 1; i >= 0; i--) {
         int carry = 0;
